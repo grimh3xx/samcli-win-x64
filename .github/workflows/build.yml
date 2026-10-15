@@ -36,16 +36,40 @@ jobs:
           name: samcli-linux-x64
           path: samcli-linux-x64
 
+  # Solta uma Release quando a versao do CMakeLists.txt muda (ou num push de tag v*).
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.event_name == 'push'
     needs: [windows, linux]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+
+      - name: Versao
+        id: ver
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            tag="$GITHUB_REF_NAME"
+          else
+            tag="v$(grep -oP 'project\(samcli VERSION \K[0-9.]+' CMakeLists.txt)"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          if [[ "$GITHUB_REF" != refs/tags/* ]] && git ls-remote --exit-code --tags origin "refs/tags/$tag" >/dev/null; then
+            echo "new=false" >> "$GITHUB_OUTPUT"; echo "$tag ja existe, nada a fazer"
+          else
+            echo "new=true" >> "$GITHUB_OUTPUT"; echo "nova release: $tag"
+          fi
+
+      - if: steps.ver.outputs.new == 'true'
+        uses: actions/download-artifact@v4
         with:
           merge-multiple: true
-      - uses: softprops/action-gh-release@v2
+
+      - if: steps.ver.outputs.new == 'true'
+        uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          name: samcli ${{ steps.ver.outputs.tag }}
           files: |
             samcli-windows-x64.exe
             samcli-linux-x64
