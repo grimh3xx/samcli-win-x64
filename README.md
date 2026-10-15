@@ -138,7 +138,7 @@ build.bat        # Windows (MSVC ou MinGW)
 ./build.sh       # Linux (gcc ou clang)
 ```
 
-Cada tag `v*` gera uma Release com os binários de Windows e Linux pelo GitHub Actions.
+Quando a versão no `CMakeLists.txt` muda, o GitHub Actions compila e solta uma Release com os binários de Windows e Linux.
 
 Pra trocar a logo, substitua `assets/logo.png` e rode `python tools/gen_logo.py` (precisa de Pillow e NumPy).
 
