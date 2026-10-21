@@ -155,4 +155,4 @@ Código escrito do zero, sem relação com a Valve.
 
 ## Licença
 
-[MIT](LICENSE) © Daniel Gomes de Oliveira · CentralTech Solutions
+[MIT](LICENSE) © iTz r3zkys · CentralTech Solutions
