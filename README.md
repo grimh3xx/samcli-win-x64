@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="docs/windows-terminal.png" alt="samcli rodando no Windows Terminal" width="760">
-
-# samcli
+<img src="docs/banner.svg" alt="samcli" width="100%">
 
 **Steam Achievement Manager de terminal, escrito em C puro.**
 Windows e Linux · um executável pequeno · sem precisar do Steamworks SDK pra compilar
@@ -15,6 +13,9 @@ Windows e Linux · um executável pequeno · sem precisar do Steamworks SDK pra 
 [Download](https://github.com/grimh3xx/samcli-win-x64/releases) · [Como usar](#como-usar) · [Como funciona](#como-funciona) · [Compilar](#compilando)
 
 </div>
+
+<p align="center"><img src="docs/demo.svg" alt="samcli demo" width="100%"></p>
+
 
 ---
 
