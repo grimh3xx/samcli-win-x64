@@ -5,10 +5,11 @@
 **Steam Achievement Manager de terminal, escrito em C puro.**
 Windows e Linux · um executável pequeno · sem precisar do Steamworks SDK pra compilar
 
-![build](https://github.com/grimh3xx/samcli-win-x64/actions/workflows/build.yml/badge.svg)
-![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-0a84ff)
-![lang](https://img.shields.io/badge/lang-C11-00c8ff)
-![license](https://img.shields.io/badge/license-MIT-1e5aff)
+[![build](https://img.shields.io/github/actions/workflow/status/grimh3xx/samcli-win-x64/build.yml?branch=main&style=flat-square&labelColor=111826&label=build)](https://github.com/grimh3xx/samcli-win-x64/actions)
+[![release](https://img.shields.io/github/v/release/grimh3xx/samcli-win-x64?style=flat-square&labelColor=111826&color=3B82F6)](https://github.com/grimh3xx/samcli-win-x64/releases/latest)
+[![license](https://img.shields.io/github/license/grimh3xx/samcli-win-x64?style=flat-square&labelColor=111826&color=22D3EE)](LICENSE)
+![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-3B82F6?style=flat-square&labelColor=111826)
+![lang](https://img.shields.io/badge/lang-C11-22D3EE?style=flat-square&labelColor=111826)
 
 [Download](https://github.com/grimh3xx/samcli-win-x64/releases) · [Como usar](#como-usar) · [Como funciona](#como-funciona) · [Compilar](#compilando)
 
