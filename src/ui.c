@@ -198,15 +198,7 @@ void ui_banner(void)
     printf("\n");
     draw_quad(word, base);
 
-    /* S  O  L  U  T  I  O  N  S  (como na logo) */
-    int gap = big ? 5 : 4, sw = 9 + 8 * gap;
-    ui_pad(base + (W - sw) / 2);
-    fg(10, 160, 255);
-    for (const char *s = "SOLUTIONS"; *s; ++s) {
-        printf("%c", *s);
-        if (s[1]) ui_pad(gap);
-    }
-    printf("%s\n\n", ui_c(C_RESET));
+    printf("\n");
 
     rule(base, W);
 
