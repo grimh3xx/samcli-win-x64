@@ -1,4 +1,4 @@
-/* ui.h - interface de terminal CentralTech (cores 24-bit, caixas, barras). */
+/* ui.h - interface de terminal grimh3xx (cores 24-bit, caixas, barras). */
 #ifndef UI_H
 #define UI_H
 

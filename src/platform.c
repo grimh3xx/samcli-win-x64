@@ -74,7 +74,7 @@ bool plat_term_init(int *width)
 {
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
-    SetConsoleTitleA("CentralTech - samcli");
+    SetConsoleTitleA("grimh3xx - samcli");
 
     bool vt = false;
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -174,7 +174,7 @@ bool plat_term_init(int *width)
     if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == 0 && ws.ws_col > 0) *width = ws.ws_col;
     const char *term = getenv("TERM");
     if (term && strcmp(term, "dumb") == 0) return false;
-    printf("\x1b]0;CentralTech - samcli\x07");     /* titulo da janela */
+    printf("\x1b]0;grimh3xx - samcli\x07");     /* titulo da janela */
     return true;
 }
 

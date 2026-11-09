@@ -38,9 +38,9 @@
 #endif
 
 #define SAMCLI_VERSION  "1.2.0"
-#define BRAND_NAME      "CentralTech"
-#define BRAND_SITE      "https://centraltechpc.com/"
-#define BRAND_SITE_TXT  "centraltechpc.com"
+#define BRAND_NAME      "grimh3xx"
+#define BRAND_SITE      "https://github.com/grimh3xx/"
+#define BRAND_SITE_TXT  "github.com/grimh3xx"
 #define BRAND_GH        "https://github.com/grimh3xx"
 #define BRAND_GH_TXT    "github.com/grimh3xx"
 

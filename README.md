@@ -157,4 +157,4 @@ Código escrito do zero, sem relação com a Valve.
 
 ## Licença
 
-[MIT](LICENSE) © iTz r3zkys · CentralTech Solutions
+[MIT](LICENSE) © iTz r3zkys · grimh3xx

@@ -1,6 +1,6 @@
 /*
  * samcli - Steam Achievement Manager de linha de comando
- * CentralTech Solutions - https://centraltechpc.com/
+ * grimh3xx - https://github.com/grimh3xx/
  *
  *   samcli                                  modo interativo
  *   samcli <appid> list                     lista as conquistas
@@ -520,7 +520,7 @@ int main(int argc, char **argv)
     ui_init(opt.plain);
 
     if (version) {
-        printf("samcli %s - CentralTech Solutions - %s\n", SAMCLI_VERSION, BRAND_SITE);
+        printf("samcli %s - grimh3xx - %s\n", SAMCLI_VERSION, BRAND_SITE);
         return 0;
     }
     if (help) { ui_banner(); usage(); return 0; }

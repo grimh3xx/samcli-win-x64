@@ -1,5 +1,5 @@
 /*
- * ui.c - interface de terminal do samcli com a identidade CentralTech.
+ * ui.c - interface de terminal do samcli com a identidade grimh3xx.
  *
  * Usa sequencias VT (cor RGB 24-bit, hyperlinks OSC 8) quando o console
  * suporta; senao cai pra um modo texto simples (tambem com --plain ou
@@ -182,7 +182,7 @@ static int center(int w)
 void ui_banner(void)
 {
     if (!g_color || g_width < 72) {
-        printf("\n  CentralTech Solutions\n"
+        printf("\n  grimh3xx\n"
                "  samcli - Steam Achievement Manager v" SAMCLI_VERSION "\n"
                "  " BRAND_SITE_TXT "  |  " BRAND_GH_TXT "\n\n");
         return;
@@ -217,7 +217,7 @@ void ui_banner(void)
     printf("%s%s%s%s  %s%s  %sv%s%s\n", ui_c(C_BOLD), ui_c(C_WHITE), t1, ui_c(C_RESET),
            ui_c(C_DIM), G_DOT, ui_c(C_GRAY), SAMCLI_VERSION, ui_c(C_RESET));
 
-    /* ► centraltechpc.com      ► github.com/grimh3xx */
+    /* ► github.com/grimh3xx      ► github.com/grimh3xx */
     int w2 = 2 + (int)strlen(BRAND_SITE_TXT) + 6 + 2 + (int)strlen(BRAND_GH_TXT);
     ui_pad(center(w2));
     printf("%s%s ", ui_c(C_CYAN), G_ARROW);
@@ -234,12 +234,12 @@ void ui_banner(void)
 void ui_header(void)
 {
     if (!g_color) {
-        printf("CentralTech | samcli v" SAMCLI_VERSION " | " BRAND_SITE_TXT "\n\n");
+        printf("grimh3xx | samcli v" SAMCLI_VERSION " | " BRAND_SITE_TXT "\n\n");
         return;
     }
     printf("\n  ");
     for (int i = 0; i < 3; ++i) { grad(i * 2, 5); printf("%s", G_SQ); }
-    printf(" %s%sCentral%s%s%sTech%s", ui_c(C_BOLD), ui_c(C_WHITE), ui_c(C_RESET),
+    printf(" %s%sgrim%s%s%sh3xx%s", ui_c(C_BOLD), ui_c(C_WHITE), ui_c(C_RESET),
            ui_c(C_BOLD), ui_c(C_BLUE2), ui_c(C_RESET));
     printf("  %s%s%s  samcli %sv%s%s  %s%s%s  ", ui_c(C_DIM), G_V, ui_c(C_RESET),
            ui_c(C_GRAY), SAMCLI_VERSION, ui_c(C_RESET), ui_c(C_DIM), G_V, ui_c(C_RESET));
