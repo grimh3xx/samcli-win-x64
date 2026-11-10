@@ -37,7 +37,7 @@
 #  include <stdint.h>
 #endif
 
-#define SAMCLI_VERSION  "1.2.0"
+#define SAMCLI_VERSION  "1.2.1"
 #define BRAND_NAME      "grimh3xx"
 #define BRAND_SITE      "https://github.com/grimh3xx/"
 #define BRAND_SITE_TXT  "github.com/grimh3xx"
