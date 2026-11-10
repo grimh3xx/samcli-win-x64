@@ -188,16 +188,23 @@ void ui_banner(void)
         return;
     }
 
-    bool big = g_width >= 92;
-    const quad_image *icon = big ? &ICON_L : &ICON_S;
-    const quad_image *word = big ? &WORD_L : &WORD_S;
-    int W = word->cols, base = center(W);
+    static const char *art[6][2] = {
+        {" ██████╗ ██████╗ ██╗███╗   ███╗", "██╗  ██╗██████╗ ██╗  ██╗██╗  ██╗"},
+        {"██╔════╝ ██╔══██╗██║████╗ ████║", "██║  ██║╚════██╗╚██╗██╔╝╚██╗██╔╝"},
+        {"██║  ███╗██████╔╝██║██╔████╔██║", "███████║ █████╔╝ ╚███╔╝  ╚███╔╝ "},
+        {"██║   ██║██╔══██╗██║██║╚██╔╝██║", "██╔══██║ ╚═══██╗ ██╔██╗  ██╔██╗ "},
+        {"╚██████╔╝██║  ██║██║██║ ╚═╝ ██║", "██║  ██║██████╔╝██╔╝ ██╗██╔╝ ██╗"},
+        {" ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝", "╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝"},
+    };
+    int W = 63, base = center(W);
+    (void)ICON_L; (void)ICON_S; (void)WORD_L; (void)WORD_S; (void)draw_quad;
 
     printf("\n");
-    draw_quad(icon, base + (W - icon->cols) / 2);
-    printf("\n");
-    draw_quad(word, base);
-
+    for (int i = 0; i < 6; ++i) {
+        ui_pad(base);
+        printf("%s%s%s%s%s%s\n", ui_c(C_BOLD), ui_c(C_WHITE), art[i][0],
+               ui_c(C_CYAN), art[i][1], ui_c(C_RESET));
+    }
     printf("\n");
 
     rule(base, W);
